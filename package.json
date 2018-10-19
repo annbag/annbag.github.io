@@ -1,0 +1,42 @@
+{
+  "name": "projectt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm-run-all test:*",
+    "test:html": "globstar nu-html-checker *.html",
+    "test:js": "globstar jshint js/*.js",
+    "init-project": "npm install && npm-run-all init:*",
+    "init:dirs": "mkdirp css sass vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
+    "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "build": "npm-run-all build:* test",
+    "build:clean": "rimraf css/*.css",
+    "build:sass": "node-sass --output-style compact -o css sass",
+    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "watch": "npm-run-all build -p watch:*",
+    "watch:browser-sync": "browser-sync start --server --files css/*.css *.html",
+    "watch:sassprefixer": "onchange sass/*scss -- npm-run-all sassprefixer:*",
+    "watch:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "watch:autoprefixer": "autoprefixer-cli css/style.css -o css/style-autoprefixer.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.26.3",
+    "compact": "^0.1.2",
+    "globstar": "^1.0.0",
+    "jshint": "^2.9.6",
+    "node-sass": "^4.9.4",
+    "npm-run-all": "^4.1.3",
+    "nu-html-checker": "^0.1.0",
+    "onchange": "^5.0.2",
+    "rimraf": "^2.6.2",
+    "sass": "^1.14.3"
+  },
+  "dependencies": {}
+}
