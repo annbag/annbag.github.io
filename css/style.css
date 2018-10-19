@@ -163,6 +163,12 @@ header div.wrap section.welcome .icon i {
   color: #1C2F7B;
 }
 
+header div.wrap section.welcome .icon i:hover {
+  background: -webkit-linear-gradient(#1C2F7B, #3A61FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 header div.wrap section.welcome button.arrow-down {
   position: absolute;
   left: 50%;

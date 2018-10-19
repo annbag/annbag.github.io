@@ -137,7 +137,12 @@ header {
 					padding: 20px 10px;
 					font-size: 5rem;
 					color: $main-color;
-				}
+					&:hover {
+						background: -webkit-linear-gradient($main-color, $color-lighter);
+					  -webkit-background-clip: text;
+					  -webkit-text-fill-color: transparent;
+					}
+				}				
 			}
 			button.arrow-down {
 				@include positionCenter()
