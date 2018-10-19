@@ -33,6 +33,9 @@ header {
 		height: 100vh;
 		background-color: rgba(255, 255, 255, 0.3);
 		nav {
+			position: relative;
+			top: 0;
+			left: 0;
 			background-color: rgba(255, 255, 255, 0.6);
 			overflow: hidden;	
 			height: 80px;
@@ -40,9 +43,7 @@ header {
 				float: left;
 				padding-left: 2%;
 			}
-			ul {			
-				max-width: 1280px;
-				margin: 0 auto;
+			ul {					
 				float: right;
 				padding-right: 2%;
 				list-style: none;
@@ -73,9 +74,9 @@ header {
 			height: calc(100vh - 80px); 
 			h1 {
 				@include positionCenter()
-				top: 15%;
-				
+				top: 15%;				
 				font-size: 7rem;
+				letter-spacing: 2px;
 				color: $main-color;
 			}
 			h2 {
@@ -178,5 +179,130 @@ header {
 				}
 			}
 		}
+	}	
+}
+@media(max-width: 1024px) {
+	header {
+		div.wrap {
+			section.welcome {
+				h1 {
+					font-size: 5rem;
+					letter-spacing: 1px;
+				}
+				h2 {
+					font-size: 2.4rem;
+				}
+			}
+			nav {
+				top: -100vh;				
+				}				
+				.burger {
+					position: fixed;
+					display: block;
+					top: 20px;
+					right: 20px;
+					width: 50px;
+					height: 40px;
+					transition: .3s;					
+					z-index: 1; 					
+					span {
+						position: absolute;
+		 				width: 100%;
+		 				height: 7px;
+		 				background-color: $main-color;
+		 				left: 0;
+		 				border-radius: 6px;
+		 				transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .2s;
+		 				&:nth-child(1){
+		 					top: 0;		 					
+		 				}
+		 				&:nth-child(2){
+		 					top: 50%;
+	 						transform: translateY(-50%);		 					
+		 				}
+		 				&:nth-child(3){
+		 					bottom: 0;		 					
+		 				}
+					}
+				}
+				.burger.active {
+					transform: rotate(-90deg);
+					span:nth-child(1) {
+	 					top: 50%;
+		 				transform: translateY(-50%) rotate(45deg);
+					}
+					span:nth-child(2) {
+	 					opacity: 0;
+					}
+					span:nth-child(3) {
+	 					top: 50%;
+		 				transform: translateY(-50%) rotate(-45deg);
+					}
+				}				
+				nav.active {
+					top: 0;
+				}				
+			}				
+		}
+	header div.wrap nav ul {
+		padding-right: 6%;
+		li {
+			a {
+				padding: 30px 10px;
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+@media(max-width:768px) {
+	header div.wrap {
+		nav {
+			height: 200px;
+			ul {
+				padding: 20px 55px 20px 0; 
+			}
+			ul li {
+  			display: block;
+  			a {
+  				padding: 5px;
+  				text-align: right;
+  			}
+  		}
+		}
+		section.welcome {
+			h1 {
+				font-size: 3.5rem;
+				letter-spacing: 1px;
+			}
+			h2 {
+				font-size: 1.8rem;
+			}
+			p {
+				font-size: 1.6rem;
+			}
+			.icon {
+				i {
+					font-size: 3.2rem;
+				}				
+			}
+			button.arrow-down {
+				width: 30px;
+				height: 30px;
+				line-height: 30px;	
+				font-size: 2rem;
+				i {
+					text-shadow: 0 -8px rgba(255, 255, 255, 0.5), 0 -16px rgba(255, 255, 255, 0.5);		
+				}
+			}
+		}
+		.burger {
+			width: 32px;
+			height: 24px;
+			transition: .3s;					
+			z-index: 1; 					
+			span {
+	 			height: 5px;
+			}
+		}							
 	}	
 }

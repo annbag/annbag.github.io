@@ -1,19 +1,95 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { /*font-family: 'Roboto Mono', monospace;*/ font-family: 'Roboto', sans-serif; }
+html { /*font-family: 'Roboto Mono', monospace;*/ font-family: 'Roboto', sans-serif; font-size: 10px; }
 
 .row::before, .row::after { content: ''; display: table; clear: both; }
 
-header { background-image: url(1.jpg); background-repeat: no-repeat; height: 100vh; }
+header { background-image: url(../1.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; height: 100vh; text-align: center; }
 
-header nav { position: fixed; top: 0; height: 80px; line-height: 80px; left: 0; right: 0; z-index: 1; }
+header div.wrap { height: 100vh; background-color: rgba(255, 255, 255, 0.3); }
 
-header nav img { float: left; padding-left: 2%; }
+header div.wrap nav { position: relative; top: 0; left: 0; background-color: rgba(255, 255, 255, 0.6); overflow: hidden; height: 80px; }
 
-header nav ul { max-width: 1280px; margin: 0 auto; float: right; padding-right: 2%; list-style: none; font-size: 0; }
+header div.wrap nav img { float: left; padding-left: 2%; }
 
-header nav ul li { display: inline-block; }
+header div.wrap nav ul { float: right; padding-right: 2%; list-style: none; font-size: 0; }
 
-header nav ul li a { display: block; padding: 0 20px; color: #fff; font-size: 20px; text-align: center; text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px; }
+header div.wrap nav ul li { display: inline-block; }
 
-header nav .welcome { position: relative; top: 80px; left: 0; }
+header div.wrap nav ul li a { display: block; padding: 30px 20px; color: #1C2F7B; font-size: 2rem; text-align: center; text-decoration: none; text-transform: uppercase; letter-spacing: 1.5px; transition: .3s; }
+
+header div.wrap nav ul li a:hover { color: #3A61FF; }
+
+header div.wrap section.welcome { position: relative; top: 0; left: 0; height: calc(100vh - 80px); }
+
+header div.wrap section.welcome h1 { position: absolute; left: 50%; transform: translateX(-50%); top: 15%; font-size: 7rem; letter-spacing: 2px; color: #1C2F7B; }
+
+header div.wrap section.welcome h2 { position: absolute; left: 50%; transform: translateX(-50%); top: 30%; padding: 20px 0; text-transform: uppercase; font-size: 3rem; color: #2B324F; }
+
+header div.wrap section.welcome p { position: absolute; left: 50%; transform: translateX(-50%); top: 45%; font-size: 2rem; font-family: 'Handlee', cursive; color: #3A61FF; animation: text 16s linear infinite; opacity: 0; }
+
+header div.wrap section.welcome p:nth-of-type(2) { animation-delay: 4s; }
+
+header div.wrap section.welcome p:nth-of-type(3) { animation-delay: 8s; }
+
+header div.wrap section.welcome p:nth-of-type(4) { animation-delay: 12s; }
+
+header div.wrap section.welcome p:nth-of-type(5) { animation-delay: 16s; }
+
+@keyframes text { 0% { opacity: 0; }
+  2% { opacity: 0; }
+  6% { opacity: 1; }
+  19% { opacity: 1; }
+  23% { opacity: 0; }
+  25% { opacity: 0; }
+  100% { opacity: 0; } }
+
+header div.wrap section.welcome .icon { position: absolute; left: 50%; transform: translateX(-50%); top: 50%; }
+
+header div.wrap section.welcome .icon i { padding: 20px 10px; font-size: 5rem; color: #1C2F7B; }
+
+header div.wrap section.welcome .icon i:hover { background: -webkit-linear-gradient(#1C2F7B, #3A61FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+header div.wrap section.welcome button.arrow-down { position: absolute; left: 50%; transform: translateX(-50%); bottom: 4%; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; border-style: none; font-size: 3rem; color: rgba(255, 255, 255, 0.5); background-color: rgba(0, 0, 0, 0.3); cursor: pointer; overflow: hidden; transition: .3s; }
+
+header div.wrap section.welcome button.arrow-down i { animation: arrow 2s linear infinite both; text-shadow: 0 -12px rgba(255, 255, 255, 0.5), 0 -24px rgba(255, 255, 255, 0.5); }
+
+header div.wrap section.welcome button.arrow-down:hover { background-color: rgba(0, 0, 0, 0.6); }
+
+header div.wrap section.welcome button.arrow-down:hover i { animation: arrow 1s linear infinite both; }
+
+@keyframes arrow { 0% { transform: translateY(-100%); }
+  100% { transform: translateY(150%); } }
+
+@media (max-width: 1024px) { header div.wrap section.welcome h1 { font-size: 5rem; letter-spacing: 1px; }
+  header div.wrap section.welcome h2 { font-size: 2.4rem; }
+  header div.wrap nav { top: -100vh; }
+  header div.wrap .burger { position: fixed; display: block; top: 20px; right: 20px; width: 50px; height: 40px; transition: .3s; z-index: 1; }
+  header div.wrap .burger span { position: absolute; width: 100%; height: 7px; background-color: #1C2F7B; left: 0; border-radius: 6px; transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .2s; }
+  header div.wrap .burger span:nth-child(1) { top: 0; }
+  header div.wrap .burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+  header div.wrap .burger span:nth-child(3) { bottom: 0; }
+  header div.wrap .burger.active { transform: rotate(-90deg); }
+  header div.wrap .burger.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+  header div.wrap .burger.active span:nth-child(2) { opacity: 0; }
+  header div.wrap .burger.active span:nth-child(3) { top: 50%; transform: translateY(-50%) rotate(-45deg); }
+  header div.wrap nav.active { top: 0; }
+  header div.wrap nav ul { padding-right: 6%; }
+  header div.wrap nav ul li a { padding: 30px 10px; font-size: 1.8rem; } }
+
+@media (max-width: 768px) { header div.wrap section.welcome h1 { font-size: 3.5rem; letter-spacing: 1px; }
+  header div.wrap section.welcome h2 { font-size: 1.8rem; }
+  header div.wrap section.welcome p { font-size: 1.6rem; }
+  header div.wrap nav { top: -100vh; }
+  header div.wrap .burger { position: fixed; display: block; top: 20px; right: 20px; width: 50px; height: 40px; transition: .3s; z-index: 1; }
+  header div.wrap .burger span { position: absolute; width: 100%; height: 7px; background-color: #1C2F7B; left: 0; border-radius: 6px; transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .2s; }
+  header div.wrap .burger span:nth-child(1) { top: 0; }
+  header div.wrap .burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+  header div.wrap .burger span:nth-child(3) { bottom: 0; }
+  header div.wrap .burger.active { transform: rotate(-90deg); }
+  header div.wrap .burger.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+  header div.wrap .burger.active span:nth-child(2) { opacity: 0; }
+  header div.wrap .burger.active span:nth-child(3) { top: 50%; transform: translateY(-50%) rotate(-45deg); }
+  header div.wrap nav.active { top: 0; }
+  header div.wrap nav ul { padding-right: 6%; }
+  header div.wrap nav ul li a { padding: 30px 10px; font-size: 1.8rem; } }
