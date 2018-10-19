@@ -11,6 +11,11 @@ html {
 $main-color: #1C2F7B;
 $color-darker: #2B324F;
 $color-lighter: #3A61FF;
+@mixin positionCenter() {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
 .row::before, .row::after {
 	content: '';
 	display: table;
@@ -67,24 +72,27 @@ header {
 			left: 0;
 			height: calc(100vh - 80px); 
 			h1 {
-				padding-top: 6%;
+				@include positionCenter()
+				top: 15%;
+				
 				font-size: 7rem;
 				color: $main-color;
 			}
 			h2 {
+				@include positionCenter()
+				top: 30%;
 				padding: 20px 0;
 				text-transform: uppercase;
 				font-size: 3rem;
 				color: $color-darker;
 			}
 			p {
-				position: absolute;
-				top: 40%;
-				left: 50%;
-				transform: translateX(-50%);
+				@include positionCenter()
+				top: 45%;
 				font-size: 2rem;
+				font-family: 'Handlee', cursive;
 				color: $color-lighter;
-				animation: text 20s linear infinite;
+				animation: text 16s linear infinite;
 				opacity: 0;
 				&:nth-of-type(2) {
 					animation-delay: 4s;
@@ -103,49 +111,51 @@ header {
 				0% {
 					opacity: 0;
 				}
-				3% {
+				2% {
 					opacity: 0;
 				}
 				6% {
 					opacity: 1;
 				}
-				14% {
+				19% {
 					opacity: 1;
 				}
-				17% {
+				23% {
 					opacity: 0;
 				}
-				20% {
+				25% {
 					opacity: 0;
 				}
 				100% {
 					opacity: 0;
 				}
 			}
-			.icon i {
-				padding: 20px 10px;
-				font-size: 5rem;
-				color: $main-color;
+			.icon {
+				@include positionCenter()
+				top: 50%;
+				i {					
+					padding: 20px 10px;
+					font-size: 5rem;
+					color: $main-color;
+				}
 			}
 			button.arrow-down {
-				position: absolute;
-				bottom: 5%;
-				left: 50%;
-				transform: translateX(-50%);
-				width: 50px;
-				height: 50px;
-				line-height: 50px;	
+				@include positionCenter()
+				bottom: 4%;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;	
 				border-radius: 50%;
 				border-style: none;
-				font-size: 4rem;
+				font-size: 3rem;
 				color: rgba(255, 255, 255, 0.5);
 				background-color: rgba(0, 0, 0, 0.3);
 				cursor: pointer;
 				overflow: hidden;
 				transition: .3s;
 				i {
-					animation: arrow 1.7s linear infinite both;
-					text-shadow: 0 -15px rgba(255, 255, 255, 0.5), 0 -30px rgba(255, 255, 255, 0.5);		
+					animation: arrow 2s linear infinite both;
+					text-shadow: 0 -12px rgba(255, 255, 255, 0.5), 0 -24px rgba(255, 255, 255, 0.5);		
 				}
 				&:hover {
 					background-color: rgba(0, 0, 0, 0.6);
@@ -159,7 +169,7 @@ header {
 			    transform: translateY(-100%);
 				}
 				100% {
-			    transform: translateY(120%);
+			    transform: translateY(150%);
 				}
 			}
 		}
