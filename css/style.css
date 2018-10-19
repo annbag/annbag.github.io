@@ -32,13 +32,8 @@ header div.wrap {
 
 header div.wrap nav {
   background-color: rgba(255, 255, 255, 0.6);
-  /*position: fixed;
-			top: 0;		
-			height: 80px;
-			line-height: 80px;
-			left: 0;
-			right: 0;
-			z-index: 1;*/
+  overflow: hidden;
+  height: 80px;
 }
 
 header div.wrap nav img {
@@ -68,6 +63,7 @@ header div.wrap nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  transition: .3s;
 }
 
 header div.wrap nav ul li a:hover {
@@ -78,16 +74,17 @@ header div.wrap section.welcome {
   position: relative;
   top: 0;
   left: 0;
+  height: calc(100vh - 80px);
 }
 
 header div.wrap section.welcome h1 {
-  margin-top: 100px;
+  padding-top: 100px;
   font-size: 72px;
   color: #1C2F7B;
 }
 
 header div.wrap section.welcome h2 {
-  margin: 20px 0;
+  padding: 20px 0;
   text-transform: uppercase;
   font-size: 32px;
   color: #2B324F;
@@ -99,9 +96,49 @@ header div.wrap section.welcome p {
 }
 
 header div.wrap section.welcome .icon i {
-  margin: 20px 10px;
+  padding: 20px 10px;
   font-size: 50px;
   color: #1C2F7B;
+}
+
+header div.wrap section.welcome button.arrow-down {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  border-style: none;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  overflow: hidden;
+  transition: .3s;
+}
+
+header div.wrap section.welcome button.arrow-down i {
+  animation: arrow 1.7s linear infinite both;
+  text-shadow: 0 -15px rgba(255, 255, 255, 0.5), 0 -30px rgba(255, 255, 255, 0.5);
+}
+
+header div.wrap section.welcome button.arrow-down:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header div.wrap section.welcome button.arrow-down:hover i {
+  animation: arrow 1s linear infinite both;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(120%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
