@@ -8,47 +8,86 @@ html {
 	font-family: 'Roboto', sans-serif;
 }
 $main-color: #1C2F7B;
+$color-darker: #2B324F;
+$color-lighter: #3A61FF;
 .row::before, .row::after {
 	content: '';
 	display: table;
 	clear: both;	
 }
 header {
-	background-color: #3A62FF;
+	background-image: url(../1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
 	height: 100vh;
-	nav {
-		position: fixed;
-		top: 0;		
-		height: 80px;
-		line-height: 80px;
-		left: 0;
-		right: 0;
-		z-index: 1;
-		background-color: grey;
-		img {
-			float: left;
-			padding-left: 2%;
-		}
-		ul {			
-			max-width: 1280px;
-			margin: 0 auto;
-			float: right;
-			padding-right: 2%;
-			list-style: none;
-			font-size: 0;			
-			li {				
-				display: inline-block;
-				a {
-					display: block;
-					padding: 0 20px;
-					color: #fff;
-					font-size: 20px;
-					text-align: center;
-					text-decoration: none;
-					text-transform: uppercase;
-					letter-spacing: 1.5px;		
+	text-align: center;
+	div.wrap {
+		height: 100vh;
+		background-color: rgba(255, 255, 255, 0.3);
+		nav {
+			background-color: rgba(255, 255, 255, 0.6);
+			/*position: fixed;
+			top: 0;		
+			height: 80px;
+			line-height: 80px;
+			left: 0;
+			right: 0;
+			z-index: 1;*/
+			img {
+				float: left;
+				padding-left: 2%;
+			}
+			ul {			
+				max-width: 1280px;
+				margin: 0 auto;
+				float: right;
+				padding-right: 2%;
+				list-style: none;
+				font-size: 0;			
+				li {				
+					display: inline-block;
+					a {
+						display: block;
+						padding: 30px 20px;
+						color: $main-color;
+						font-size: 20px;
+						text-align: center;
+						text-decoration: none;
+						text-transform: uppercase;
+						letter-spacing: 1.5px;
+						&:hover {
+							color: $color-lighter;
+						}
+					}
 				}
 			}
 		}
-	}
+		section.welcome {
+			position: relative;				
+			top: 0;
+			left: 0;
+			h1 {
+				margin-top: 100px;
+				font-size: 72px;
+				color: $main-color;
+			}
+			h2 {
+				margin: 20px 0;
+				text-transform: uppercase;
+				font-size: 32px;
+				color: $color-darker;
+			}
+			p {
+				font-size: 16px;
+				color: $color-lighter;
+			}
+			.icon i {
+				margin: 20px 10px;
+				font-size: 50px;
+				color: $main-color;
+			}
+		}
+	}	
 }
