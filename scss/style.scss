@@ -39,7 +39,7 @@ $lightblue-color: #EAEEFC;
 	clear: both;	
 }
 header {
-	background-image: url(../1.jpg);
+	background-image: url(../images/bg1.jpg);
 	@include bgImg()
 	height: 100vh;
 	text-align: center;
@@ -451,7 +451,7 @@ section.about {
 }
 
 section.skills {
-	background-image: url(../images/bg4.png);
+	background-image: url(../images/bg2.png);
 
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -471,10 +471,28 @@ section.portfolio {
 }
 section.contact {
 	height: 70vh;
-	opacity: .6;
-	background-image: url(../images/bg8.jpg);
+	/*opacity: .6;*/
+	background-image: url(../images/bg7.jpg);
 	@include bgImg()
+	div.wrap {
+		height: 70vh;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 	h1 {
 		@include styleHeadline()
+	}
+}
+footer {
+	background-color: rgba(255, 255, 255, 0.6);
+	text-align: center;
+	p {
+		padding: 15px;
+		font-size: 1.6rem;
+		color: $color-darker;
+	}
+}
+@media(max-width: 825px) {
+	footer p {
+		font-size: 1.2rem;
 	}
 }
