@@ -384,12 +384,17 @@ header div.wrap section.welcome button.arrow-down:hover i {
   }
 }
 
+/*section about*/
 section.about {
   background-color: #f2f2f2;
 }
 
 section.about h1 {
-  display: block;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
   padding: 60px 0 60px;
   font-size: 4.8rem;
   text-transform: uppercase;
@@ -397,6 +402,7 @@ section.about h1 {
   background: linear-gradient(to right, #2B324F, #3A61FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
 }
 
 section.about div.description {
@@ -465,6 +471,7 @@ section.about div.description div.image img {
   }
 }
 
+/*section skills*/
 section.skills {
   background-image: url(../images/bg2.png);
   background-repeat: no-repeat;
@@ -475,7 +482,11 @@ section.skills {
 }
 
 section.skills h1 {
-  display: block;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
   padding: 60px 0 60px;
   font-size: 4.8rem;
   text-transform: uppercase;
@@ -483,15 +494,21 @@ section.skills h1 {
   background: linear-gradient(to right, #2B324F, #3A61FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
 }
 
+/*section portfolio*/
 section.portfolio {
   background-color: #ccc;
   height: 200vh;
 }
 
 section.portfolio h1 {
-  display: block;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
   padding: 60px 0 60px;
   font-size: 4.8rem;
   text-transform: uppercase;
@@ -499,12 +516,17 @@ section.portfolio h1 {
   background: linear-gradient(to right, #2B324F, #3A61FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
 }
 
+/*section contact*/
 section.contact {
-  height: 70vh;
-  /*opacity: .6;*/
-  background-image: url(../images/bg7.jpg);
+  height: 100vh;
+  background-image: url(../images/bg6.jpeg);
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: cover;
@@ -512,12 +534,17 @@ section.contact {
 }
 
 section.contact div.wrap {
-  height: 70vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  /*background-color: rgba(255, 255, 255, 0.5);*/
 }
 
-section.contact h1 {
-  display: block;
+section.contact div.wrap h1 {
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
   padding: 60px 0 60px;
   font-size: 4.8rem;
   text-transform: uppercase;
@@ -525,8 +552,106 @@ section.contact h1 {
   background: linear-gradient(to right, #2B324F, #3A61FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
 }
 
+section.contact div.wrap p {
+  font-size: 2.2rem;
+  color: #2B324F;
+  text-align: center;
+}
+
+section.contact div.wrap div p.animation {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #3A61FF;
+  opacity: 0;
+  letter-spacing: 2px;
+  animation: changeText 6s linear infinite;
+}
+
+section.contact div.wrap div p.animation:nth-of-type(2) {
+  animation-delay: 3s;
+  color: #1C2F7B;
+}
+
+@keyframes changeText {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+section.contact div.wrap div.information {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section.contact div.wrap div.information div.info {
+  flex-basis: 25%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+section.contact div.wrap div.information div.info .icon {
+  font-size: 5rem;
+  color: #2B324F;
+}
+
+section.contact div.wrap div.information div.info p.txt {
+  font-size: 2.6rem;
+}
+
+section.contact div.wrap div.icon-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+
+section.contact div.wrap div.icon-btn i {
+  padding: 20px 10px;
+  font-size: 5rem;
+  color: #1C2F7B;
+  transition: .5s;
+}
+
+section.contact div.wrap div.icon-btn i:hover {
+  background: -webkit-linear-gradient(#1C2F7B, #3A61FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*footer*/
 footer {
   background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
