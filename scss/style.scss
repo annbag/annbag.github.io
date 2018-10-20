@@ -54,7 +54,7 @@ header {
 					display: inline-block;
 					a {
 						display: block;
-						padding: 30px 20px;
+						padding: 30px 20px 10px;
 						color: $main-color;
 						font-size: 1.6rem;
 						text-align: center;
@@ -64,6 +64,8 @@ header {
 						transition: .3s;
 						&:hover {
 							color: $color-lighter;
+							box-shadow: 0px 3px 0px $color-lighter;
+							/*border-bottom: 2px solid $color-lighter;*/
 						}
 					}
 				}
@@ -139,6 +141,7 @@ header {
 					padding: 20px 10px;
 					font-size: 5rem;
 					color: $main-color;
+					transition: .5s;
 					&:hover {
 						background: -webkit-linear-gradient($main-color, $color-lighter);
 					  -webkit-background-clip: text;
@@ -159,7 +162,7 @@ header {
 				background-color: rgba(0, 0, 0, 0.3);
 				cursor: pointer;
 				overflow: hidden;
-				transition: .3s;
+				transition: .5s;
 				i {
 					animation: arrow 2s linear infinite both;
 					text-shadow: 0 -12px rgba(255, 255, 255, 0.5), 0 -24px rgba(255, 255, 255, 0.5);		

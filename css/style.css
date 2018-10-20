@@ -60,7 +60,7 @@ header div.wrap nav ul li {
 
 header div.wrap nav ul li a {
   display: block;
-  padding: 30px 20px;
+  padding: 30px 20px 10px;
   color: #1C2F7B;
   font-size: 1.6rem;
   text-align: center;
@@ -72,6 +72,8 @@ header div.wrap nav ul li a {
 
 header div.wrap nav ul li a:hover {
   color: #3A61FF;
+  box-shadow: 0px 3px 0px #3A61FF;
+  /*border-bottom: 2px solid $color-lighter;*/
 }
 
 header div.wrap section.welcome {
@@ -164,6 +166,7 @@ header div.wrap section.welcome .icon i {
   padding: 20px 10px;
   font-size: 5rem;
   color: #1C2F7B;
+  transition: .5s;
 }
 
 header div.wrap section.welcome .icon i:hover {
@@ -187,7 +190,7 @@ header div.wrap section.welcome button.arrow-down {
   background-color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
   overflow: hidden;
-  transition: .3s;
+  transition: .5s;
 }
 
 header div.wrap section.welcome button.arrow-down i {
