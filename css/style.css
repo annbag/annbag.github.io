@@ -522,7 +522,7 @@ section.portfolio h1 {
 /*section contact*/
 section.contact {
   height: 100vh;
-  background-image: url(../images/bg6.jpeg);
+  background-image: url(../images/bg4.jpeg);
   position: relative;
   top: 0;
   left: 0;
@@ -535,8 +535,8 @@ section.contact {
 
 section.contact div.wrap {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  /*background-color: rgba(255, 255, 255, 0.5);*/
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 section.contact div.wrap h1 {
