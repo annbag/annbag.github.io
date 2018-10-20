@@ -384,4 +384,52 @@ header div.wrap section.welcome button.arrow-down:hover i {
   }
 }
 
+section.about {
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+section.about h1 {
+  padding: 80px 0 50px;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(to bottom, #1C2F7B 0%, #3A61FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section.about div.description {
+  display: flex;
+}
+
+section.about div.description div.text {
+  flex-grow: 1;
+}
+
+section.about div.description div.text p {
+  font-size: 1.8rem;
+  text-align: justify;
+  line-height: 150%;
+  margin: 10px 50px;
+}
+
+section.about div.description div.image {
+  flex-basis: 40%;
+}
+
+section.about div.description div.image img {
+  width: 350px;
+  height: 350px;
+  margin: 0 40px;
+  border-radius: 50%;
+  border: 4px solid #1C2F7B;
+  object-fit: cover;
+}
+
+section.skills {
+  height: 50vh;
+  background-color: #3A61FF;
+}
+
 /*# sourceMappingURL=style.css.map */
