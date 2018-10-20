@@ -389,6 +389,7 @@ section.about {
 }
 
 section.about h1 {
+  display: block;
   padding: 60px 0 60px;
   font-size: 4.8rem;
   text-transform: uppercase;
@@ -399,6 +400,8 @@ section.about h1 {
 }
 
 section.about div.description {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
 }
 
@@ -462,9 +465,61 @@ section.about div.description div.image img {
   }
 }
 
-/*section.skills {
-	height: 50vh;
-	background-color: $color-lighter;
-}*/
+section.skills {
+  background-image: url(../images/bg4.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: center;
+  background-position: center;
+  height: 75vh;
+}
+
+section.skills h1 {
+  display: block;
+  padding: 60px 0 60px;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(to right, #2B324F, #3A61FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section.portfolio {
+  background-color: #ccc;
+  height: 200vh;
+}
+
+section.portfolio h1 {
+  display: block;
+  padding: 60px 0 60px;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(to right, #2B324F, #3A61FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section.contact {
+  height: 70vh;
+  opacity: .6;
+  background-image: url(../images/bg8.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+section.contact h1 {
+  display: block;
+  padding: 60px 0 60px;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(to right, #2B324F, #3A61FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /*# sourceMappingURL=style.css.map */

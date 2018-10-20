@@ -12,19 +12,26 @@ $main-color: #1C2F7B;
 $color-darker: #2B324F;
 $color-lighter: #3A61FF;
 $lightblue-color: #EAEEFC;
+@mixin bgImg() {
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 @mixin positionCenter() {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 }
 @mixin styleHeadline() {
-	padding: 60px 0 60px;
+	display: block;
+	padding: 60px 0 60px;	
 	font-size: 4.8rem;
 	text-transform: uppercase;
 	text-align: center;
 	background: linear-gradient(to right, $color-darker, $color-lighter);
 	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
+	  -webkit-text-fill-color: transparent;	
 }
 .row::before, .row::after {
 	content: '';
@@ -33,10 +40,7 @@ $lightblue-color: #EAEEFC;
 }
 header {
 	background-image: url(../1.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	-webkit-background-size: cover;
-	background-size: cover;
+	@include bgImg()
 	height: 100vh;
 	text-align: center;
 	div.wrap {
@@ -55,7 +59,7 @@ header {
 				float: left;
 				padding-left: 2%;
 			}
-			ul {					
+			ul {			
 				float: right;
 				padding-right: 2%;
 				list-style: none;
@@ -74,7 +78,7 @@ header {
 						transition: .3s;
 						&:hover {
 							color: $color-lighter;
-							box-shadow: 0px 3px 0px $color-lighter;
+							box-shadow: 0px 3px 0px $color-lighter;							
 							/*border-bottom: 2px solid $color-lighter;*/
 						}
 					}
@@ -374,12 +378,14 @@ header {
   	}  	
 	}
 }
-section.about {
+section.about {	
 	background-color: #f2f2f2;
 	h1 {
 		@include styleHeadline()
   }
   div.description {
+  	max-width: 1280px;
+		margin: 0 auto;
   	display: flex;
   	div.text {
   		flex-grow: 1;
@@ -444,8 +450,31 @@ section.about {
 	}
 }
 
+section.skills {
+	background-image: url(../images/bg4.png);
 
-/*section.skills {
-	height: 50vh;
-	background-color: $color-lighter;
-}*/
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: center;
+	background-position: center;
+	height: 75vh;
+	h1 {
+		@include styleHeadline()
+  }
+}
+section.portfolio {
+	background-color: #ccc;
+	height: 200vh;
+	h1 {
+		@include styleHeadline()
+  }
+}
+section.contact {
+	height: 70vh;
+	opacity: .6;
+	background-image: url(../images/bg8.jpg);
+	@include bgImg()
+	h1 {
+		@include styleHeadline()
+	}
+}
