@@ -11,18 +11,18 @@ html {
 $main-color: #1C2F7B;
 $color-darker: #2B324F;
 $color-lighter: #3A61FF;
-$lightblue-color: #B1C0FF;
+$lightblue-color: #EAEEFC;
 @mixin positionCenter() {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 }
 @mixin styleHeadline() {
-	padding: 80px 0 50px;
+	padding: 60px 0 60px;
 	font-size: 4.8rem;
 	text-transform: uppercase;
 	text-align: center;
-	background: linear-gradient(to bottom, $main-color 0%, $color-lighter 100%);
+	background: linear-gradient(to right, $color-darker, $color-lighter);
 	  -webkit-background-clip: text;
 	  -webkit-text-fill-color: transparent;
 }
@@ -375,7 +375,6 @@ header {
 	}
 }
 section.about {
-	height: 100vh;
 	background-color: #f2f2f2;
 	h1 {
 		@include styleHeadline()
@@ -384,19 +383,25 @@ section.about {
   	display: flex;
   	div.text {
   		flex-grow: 1;
+  		background-color: $lightblue-color;
+  		margin: 0 80px 80px;
+  		padding: 15px 0;
+  		border: 1px solid $color-darker;
+  		box-shadow: 10px 10px 20px #333;
   		p {	  		
-	  		font-size: 1.8rem;
+	  		font-size: 1.6rem;
 	  		text-align: justify;
 	  		line-height: 150%;
-	  		margin: 10px 50px;
+	  		padding: 15px 30px;
+	  		color: $color-darker; 		
 	  	}
   	}  	
 		div.image {
 			flex-basis: 40%;
 			img {
 				width: 350px;
-				height: 350px;
-				margin: 0 40px;
+				height: 350px;				
+				margin: 0 80px;
 				border-radius: 50%;
 				border: 4px solid $main-color;
 				object-fit: cover;
@@ -404,8 +409,43 @@ section.about {
 		}
   }
 }
-section.skills {
+@media(max-width: 1024px) {
+	section.about {
+		div.description {  
+			flex-direction: column;
+			div.text {
+				order: 2;
+			}
+			div.image {
+				margin: 0 0 20px;
+				align-self: center;
+			}
+  	}
+  }
+}
+@media(max-width: 640px) {
+	section.about {
+		h1 {
+			font-size: 3rem;
+		}
+		div.description {
+			div.text {
+				margin: 40px;
+				p {
+					font-size: 1.2rem;
+				}
+			}
+			div.image img {
+				width: 250px;
+				height:  250px;
+				margin: 20px;
+			}
+		}
+	}
+}
+
+
+/*section.skills {
 	height: 50vh;
 	background-color: $color-lighter;
-
-}
+}*/
