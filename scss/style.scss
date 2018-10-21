@@ -181,38 +181,39 @@ header {
 					}
 				}				
 			}
-			button.arrow-down {
+			a.arrow-down {
 				@include positionCenter()
-				bottom: 4%;
-				width: 40px;
-				height: 40px;
-				/*line-height: 40px;	*/
-				/*border-radius: 50%;*/
-				border-style: none;
-				font-size: 3rem;
-				color: rgba(255, 255, 255, 0.5);
-				background-color: transparent;
-				/*background-color: rgba(0, 0, 0, 0.3);*/
-				cursor: pointer;
-				overflow: hidden;
-				transition: .5s;
-				i {
-					animation: arrow 2s linear infinite both;
-					text-shadow: 0 -12px rgba(255, 255, 255, 0.5), 0 -24px rgba(255, 255, 255, 0.5);		
-				}
-				&:hover {
-					background-color: rgba(0, 0, 0, 0.6);
-					i {
-						animation: arrow 1s linear infinite both;
+				bottom: 15%;
+				span {
+					@include positionCenter()
+					top: 0;
+					width: 24px;
+					height: 24px;
+					margin-left: -12px;
+					border-left: 1px solid #fff;
+					border-bottom: 1px solid #fff;
+					transform: rotate(-45deg);
+					animation: arrowDown 2s infinite;
+					opacity: 0;
+					&:nth-of-type(2) {
+						animation-delay: .2s;
+						top: 16px;
+					}
+					&:nth-of-type(3) {
+						animation-delay: .4s;
+						top: 32px;
 					}
 				}
 			}
-			@keyframes arrow {
+			@keyframes arrowDown {
 				0% {
-			    transform: translateY(-100%);
+					opacity: 0;
+				}
+				50% {
+					opacity: 1;
 				}
 				100% {
-			    transform: translateY(150%);
+					opacity: 0;
 				}
 			}
 		}
