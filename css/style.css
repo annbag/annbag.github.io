@@ -55,7 +55,9 @@ header div.wrap nav ul {
 }
 
 header div.wrap nav ul li {
+  position: relative;
   display: inline-block;
+  overflow: hidden;
 }
 
 header div.wrap nav ul li a {
@@ -70,10 +72,22 @@ header div.wrap nav ul li a {
   transition: .3s;
 }
 
+header div.wrap nav ul li a span {
+  position: absolute;
+  width: 96%;
+  height: 2px;
+  background-color: #3A61FF;
+  bottom: 0;
+  left: -100%;
+  transition: .4s;
+}
+
 header div.wrap nav ul li a:hover {
   color: #3A61FF;
-  box-shadow: 0px 3px 0px #3A61FF;
-  /*border-bottom: 2px solid $color-lighter;*/
+}
+
+header div.wrap nav ul li a:hover span {
+  left: 2%;
 }
 
 header div.wrap section.welcome {
@@ -182,12 +196,13 @@ header div.wrap section.welcome button.arrow-down {
   bottom: 4%;
   width: 40px;
   height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
+  /*line-height: 40px;	*/
+  /*border-radius: 50%;*/
   border-style: none;
   font-size: 3rem;
   color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  /*background-color: rgba(0, 0, 0, 0.3);*/
   cursor: pointer;
   overflow: hidden;
   transition: .5s;

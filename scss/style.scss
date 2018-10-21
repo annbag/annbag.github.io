@@ -70,9 +70,11 @@ header {
 				padding-right: 2%;
 				list-style: none;
 				font-size: 0;			
-				li {				
+				li {	
+					position: relative;			
 					display: inline-block;
-					a {
+					overflow: hidden;
+					a {					
 						display: block;
 						padding: 30px 20px 10px;
 						color: $main-color;
@@ -82,10 +84,20 @@ header {
 						text-transform: uppercase;
 						letter-spacing: 1.5px;
 						transition: .3s;
+						span {
+							position: absolute;
+							width: 96%;
+							height: 2px;
+							background-color: $color-lighter;
+							bottom: 0;
+							left: -100%;
+							transition: .4s;
+						}
 						&:hover {
 							color: $color-lighter;
-							box-shadow: 0px 3px 0px $color-lighter;							
-							/*border-bottom: 2px solid $color-lighter;*/
+						}
+						&:hover span {							
+							left: 2%;
 						}
 					}
 				}
@@ -174,12 +186,13 @@ header {
 				bottom: 4%;
 				width: 40px;
 				height: 40px;
-				line-height: 40px;	
-				border-radius: 50%;
+				/*line-height: 40px;	*/
+				/*border-radius: 50%;*/
 				border-style: none;
 				font-size: 3rem;
 				color: rgba(255, 255, 255, 0.5);
-				background-color: rgba(0, 0, 0, 0.3);
+				background-color: transparent;
+				/*background-color: rgba(0, 0, 0, 0.3);*/
 				cursor: pointer;
 				overflow: hidden;
 				transition: .5s;
