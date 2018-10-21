@@ -207,7 +207,7 @@ header div.wrap section.welcome a.arrow-down span {
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
   transform: rotate(-45deg);
-  animation: arrowDown 2s infinite;
+  animation: arrow 2s infinite;
   opacity: 0;
 }
 
@@ -221,7 +221,42 @@ header div.wrap section.welcome a.arrow-down span:nth-of-type(3) {
   top: 30px;
 }
 
-@keyframes arrowDown {
+header div.wrap section.welcome a.arrow-up {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  z-index: 2;
+}
+
+header div.wrap section.welcome a.arrow-up span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  border-right: 1px solid #2B324F;
+  border-top: 1px solid #2B324F;
+  transform: rotate(-45deg);
+  animation: arrow 2s infinite;
+  opacity: 0;
+}
+
+header div.wrap section.welcome a.arrow-up span:nth-of-type(1) {
+  animation-delay: .4s;
+}
+
+header div.wrap section.welcome a.arrow-up span:nth-of-type(2) {
+  animation-delay: .2s;
+  top: 15px;
+}
+
+header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
+  top: 30px;
+}
+
+@keyframes arrow {
   0% {
     opacity: 0;
   }

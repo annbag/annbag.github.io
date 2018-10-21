@@ -10,3 +10,24 @@ $('a.arrow-down').click(function() {
 		scrollTop: $('.about').offset().top
 	}, 500)
 });
+
+$(document).ready(function() {
+	$('a.arrow-up').hide();
+
+	$(function() {
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 100) {
+				$('a.arrow-up').fadeIn();
+			} else {
+				$('a.arrow-up').fadeOut();
+			}
+		});
+
+		$('a.arrow-up').click(function() {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1000);
+			return false;
+		});
+	});
+});
