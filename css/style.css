@@ -236,11 +236,15 @@ header div.wrap section.welcome a.arrow-up span {
   width: 20px;
   height: 20px;
   margin-left: -10px;
-  border-right: 1px solid #2B324F;
-  border-top: 1px solid #2B324F;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   transform: rotate(-45deg);
   animation: arrow 2s infinite;
   opacity: 0;
+  border-top: 1px solid #2B324F;
+  border-right: 1px solid #2B324F;
+  border-bottom: none;
+  border-left: none;
 }
 
 header div.wrap section.welcome a.arrow-up span:nth-of-type(1) {
@@ -280,7 +284,7 @@ header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
     top: -100vh;
   }
   header div.wrap .burger {
-    position: fixed;
+    position: relative;
     display: block;
     top: 20px;
     right: 20px;
@@ -370,15 +374,6 @@ header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
   header div.wrap section.welcome .icon i {
     font-size: 3.2rem;
   }
-  header div.wrap section.welcome button.arrow-down {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 2rem;
-  }
-  header div.wrap section.welcome button.arrow-down i {
-    text-shadow: 0 -8px rgba(255, 255, 255, 0.5), 0 -16px rgba(255, 255, 255, 0.5);
-  }
   header div.wrap .burger {
     width: 32px;
     height: 24px;
@@ -412,17 +407,38 @@ header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
   header div.wrap section.welcome p {
     font-size: 1.4rem;
   }
-  header div.wrap section.welcome button.arrow-down {
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 1.6rem;
+  header div.wrap section.welcome a.arrow-down {
+    bottom: 20%;
   }
-  header div.wrap section.welcome button.arrow-down i {
-    text-shadow: 0 -6px rgba(255, 255, 255, 0.5), 0 -12px rgba(255, 255, 255, 0.5);
+  header div.wrap section.welcome a.arrow-down span {
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+  }
+  header div.wrap section.welcome a.arrow-down span:nth-of-type(2) {
+    top: 8px;
+  }
+  header div.wrap section.welcome a.arrow-down span:nth-of-type(3) {
+    top: 16px;
+  }
+  header div.wrap section.welcome a.arrow-up {
+    bottom: 15%;
+    right: 10%;
+  }
+  header div.wrap section.welcome a.arrow-up span {
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+  }
+  header div.wrap section.welcome a.arrow-up span:nth-of-type(2) {
+    top: 8px;
+  }
+  header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
+    top: 16px;
   }
 }
 
+/**/
 @media (max-width: 360px) and (orientation: portrait) {
   header div.wrap nav {
     height: 190px;
@@ -640,10 +656,10 @@ section.portfolio div.projects div div.caption a:hover {
 
 @media (max-width: 360px) {
   section.portfolio div.projects div a img {
-    margin: 20px 20px 0;
+    margin: 10px 10px 0;
   }
   section.portfolio div.projects div div.caption {
-    margin: -3px 20px 60px;
+    margin: -3px 10px 60px;
   }
 }
 

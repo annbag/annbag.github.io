@@ -24,6 +24,17 @@ $lightgrey-color: #F2F2F2;
 	left: 50%;
 	transform: translateX(-50%);
 }
+@mixin arrow() {
+	top: 0;
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	transform: rotate(-45deg);
+	animation: arrow 2s infinite;
+	opacity: 0;
+}
 @mixin styleHeadline() {
 	position: relative;
 	top: 0;
@@ -186,15 +197,7 @@ header {
 				bottom: 15%;
 				span {
 					@include positionCenter()
-					top: 0;
-					width: 20px;
-					height: 20px;
-					margin-left: -10px;
-					border-left: 1px solid #fff;
-					border-bottom: 1px solid #fff;
-					transform: rotate(-45deg);
-					animation: arrow 2s infinite;
-					opacity: 0;
+					@include arrow()
 					&:nth-of-type(2) {
 						animation-delay: .2s;
 						top: 15px;
@@ -212,15 +215,11 @@ header {
 				z-index: 2;
 				span {
 					@include positionCenter()
-					top: 0;
-					width: 20px;
-					height: 20px;
-					margin-left: -10px;
+					@include arrow					
+					border-top: 1px solid $color-darker;	
 					border-right: 1px solid $color-darker;
-					border-top: 1px solid $color-darker;
-					transform: rotate(-45deg);
-					animation: arrow 2s infinite;
-					opacity: 0;
+					border-bottom: none;
+					border-left: none;				
 					&:nth-of-type(1) {
 						animation-delay: .4s;
 					}
@@ -263,7 +262,7 @@ header {
 				top: -100vh;				
 				}				
 				.burger {
-					position: fixed;
+					position: relative;
 					display: block;
 					top: 20px;
 					right: 20px;
@@ -356,15 +355,6 @@ header {
 					font-size: 3.2rem;
 				}				
 			}
-			button.arrow-down {
-				width: 30px;
-				height: 30px;
-				line-height: 30px;	
-				font-size: 2rem;
-				i {
-					text-shadow: 0 -8px rgba(255, 255, 255, 0.5), 0 -16px rgba(255, 255, 255, 0.5);		
-				}
-			}
 		}
 		.burger {
 			width: 32px;
@@ -399,18 +389,39 @@ header {
 			p {
 				font-size: 1.4rem;
 			}
-			button.arrow-down {
-				width: 25px;
-				height: 25px;
-				line-height: 25px;	
-				font-size: 1.6rem;
-				i {
-					text-shadow: 0 -6px rgba(255, 255, 255, 0.5), 0 -12px rgba(255, 255, 255, 0.5);		
+			a.arrow-down {
+				bottom: 20%;
+				span {
+					width: 12px;
+					height: 12px;
+					margin-left: -6px;
+					&:nth-of-type(2) {
+						top: 8px;
+					}
+					&:nth-of-type(3) {
+						top: 16px;
+					}
+				}
+			}
+			a.arrow-up {
+				bottom: 15%;
+				right: 10%;
+				span {
+					width: 12px;
+					height: 12px;
+					margin-left: -6px;
+					&:nth-of-type(2) {
+						top: 8px;
+					}
+					&:nth-of-type(3) {
+						top: 16px;
+					}
 				}
 			}
   	}  	
 	}
 }
+/**/
 @media(max-width: 360px) and (orientation: portrait) {
 	header div.wrap {
 		nav {
@@ -582,10 +593,10 @@ section.portfolio {
 	section.portfolio {
 		div.projects div {
 			a img {
-		  	margin: 20px 20px 0; 
+		  	margin: 10px 10px 0; 
 		  }
 		  div.caption {
-	  		margin: -3px 20px 60px;
+	  		margin: -3px 10px 60px;
 	  	}
 		}
 	}
