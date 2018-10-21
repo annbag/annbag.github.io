@@ -468,10 +468,57 @@ section.skills {
 }
 /*section portfolio*/
 section.portfolio {
-	background-color: $lightgrey-color;
-	height: 200vh;
+	background-color: $lightgrey-color;	
 	h1 {
 		@include styleHeadline()
+  }
+  div.projects {
+  	max-width: 1280px;
+		margin: 0 auto;
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	div {
+	  	a img {
+	  		opacity: 0.7;
+	  		margin: 40px 20px 0; 
+	  	}
+	  	div.caption {
+	  		display: block;
+	  		width: 350px;
+	  		margin: -3px 20px 40px;
+	  		background-color: #4D5A91;
+	  		color: $lightblue-color;
+	  		text-align: center;
+	  		h2 {
+	  			text-transform: uppercase;
+	  			padding: 10px 0;
+	  			font-size: 1.6rem;
+	  		}
+	  		p {
+	  			padding: 0 10px;
+	  			font-size: 1.2rem;
+	  		}
+	  		a {
+					display: inline-block;
+					margin: 15px;
+					padding: 10px 20px;
+					font-size: 1.4rem;
+					border-style: none;
+					background-color: $main-color;
+					border-radius: 6px;
+					color: $lightblue-color;
+					text-transform: uppercase;
+					text-decoration: none;
+					letter-spacing: 2px;
+					transition: .3s;
+					cursor: pointer;
+					&:hover {
+						background-image: linear-gradient($main-color, #21378F);
+					}
+				}
+	  	}
+		}
   }
 }
 /*section contact*/
