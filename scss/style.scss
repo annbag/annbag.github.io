@@ -12,6 +12,7 @@ $main-color: #1C2F7B;
 $color-darker: #2B324F;
 $color-lighter: #3A61FF;
 $lightblue-color: #EAEEFC;
+$lightgrey-color: #F2F2F2;
 @mixin bgImg() {
 	background-repeat: no-repeat;
 	background-position: center;
@@ -385,7 +386,7 @@ header {
 }
 /*section about*/
 section.about {	
-	background-color: #f2f2f2;
+	background-color: $lightgrey-color;
 	h1 {
 		@include styleHeadline()
   }
@@ -458,11 +459,8 @@ section.about {
 /*section skills*/
 section.skills {
 	background-image: url(../images/bg2.png);
-
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: center;
-	background-position: center;
+	background-attachment: fixed;
+	@include bgImg()
 	height: 75vh;
 	h1 {
 		@include styleHeadline()
@@ -470,7 +468,7 @@ section.skills {
 }
 /*section portfolio*/
 section.portfolio {
-	background-color: #ccc;
+	background-color: $lightgrey-color;
 	height: 200vh;
 	h1 {
 		@include styleHeadline()
@@ -480,6 +478,8 @@ section.portfolio {
 section.contact {
 	height: 100vh;
 	background-image: url(../images/bg4.jpeg);
+	/*background-image: url(../images/bg2.png);*/
+	background-attachment: fixed;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -498,10 +498,8 @@ section.contact {
 			text-align: center;
 		}
 		div p.animation {
-			position: absolute;
+			@include positionCenter()
 			top: 40%;
-			left: 50%;
-			transform: translateX(-50%);
 			font-size: 2.6rem;
 			text-transform: uppercase;
 			font-weight: bold;
@@ -562,7 +560,6 @@ section.contact {
 		div.icon-btn {
 			@include positionCenter()
 			bottom: 5%;
-			transform: translateX(-50%);
 			i {					
 				padding: 20px 10px;
 				font-size: 5rem;
@@ -577,9 +574,148 @@ section.contact {
 		}
 	}
 }
+@media(max-width: 1024px) {
+	section.contact {
+		div.wrap {
+			div.information {
+				left: 5%;
+				right: 5%;
+				div.info {
+					flex-basis: 30%;					
+				}
+			}	
+		}
+	}
+}
+@media(max-width: 825px) {
+	section.contact {
+		div.wrap {
+			h1 {
+				font-size: 3rem;
+			}
+			div p.animation {
+				top: 25%;
+				font-size: 2.2rem;
+			}
+			div.information {
+				top: 40%;
+				left: 20%;
+				right: 20%;
+				flex-direction: column;				
+				div.info {
+					flex-basis: 30%;
+					align-self: stretch;
+					flex-direction: row;
+					justify-content: flex-start;
+					padding: 5px;
+					.icon {
+						flex-basis: 30%;						
+						font-size: 3rem;
+						text-align: center;
+					}
+					p.txt {
+						flex-grow: 1;
+						font-size: 2.6rem;
+						text-align: left;
+					}
+				}
+			}
+			div.icon-btn {
+				i {					
+					padding: 10px;
+					font-size: 2.8rem;
+				}	
+			}
+		}				
+	}
+}
+@media(max-width: 825px) and (orientation: landscape){
+	section.contact {
+		div.wrap {
+			h1 {
+				padding: 40px 0 20px;
+			}
+			p {
+				font-size: 1.8rem;
+			}
+			div p.animation {
+				top: 35%;
+				font-size: 2rem;
+			}				
+			div.information {
+				top: 45%;
+				left: 30%;
+				right: 30%;			
+				div.info {
+					.icon {
+						font-size: 2rem;
+					}
+					p.txt {
+						font-size: 1.6rem;
+					}
+				}
+			}
+		}				
+	}
+}
+@media(max-width: 640px) and (orientation: landscape){
+	section.contact {
+		div.wrap {
+			p {
+				font-size: 1.6rem;
+			}
+			div p.animation {
+				top: 38%;
+				font-size: 1.6rem;
+			}				
+			div.information {
+				left: 25%;			
+				div.info {
+					.icon {
+						font-size: 1.6rem;
+					}
+					p.txt {
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}				
+	}
+}
+@media(max-width: 425px) and (orientation: portrait){
+	section.contact {
+		div.wrap {
+			h1 {
+				padding: 40px 0;
+			}
+			p {
+				font-size: 1.6rem;
+				padding: 0 20px;
+			}
+			div p.animation {
+				top: 40%;
+				font-size: 1.6rem;
+			}				
+			div.information {
+				top: 55%;
+				left: 10%;
+				right: 10%;			
+				div.info {
+					.icon {
+						font-size: 1.6rem;
+					}
+					p.txt {
+						padding: 0;
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}				
+	}
+}
 /*footer*/
 footer {
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: $lightgrey-color;
 	text-align: center;
 	p {
 		padding: 15px;
