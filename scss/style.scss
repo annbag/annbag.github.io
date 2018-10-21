@@ -511,9 +511,25 @@ section.skills {
 	background-image: url(../images/bg2.png);
 	background-attachment: fixed;
 	@include bgImg()
-	height: 75vh;
 	h1 {
 		@include styleHeadline()
+  }
+  div.banner-skills {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	align-items: center;
+  	padding: 0 80px 50px 80px;
+  	overflow: hidden;
+  	div.skill {
+  		flex-basis: 20%;
+  		img {
+	  		display: block;
+	  		width: 150px;
+	  		margin: 50px 25px;
+	  	}
+  	}
+  	
   }
 }
 @media(max-width: 825px) {
