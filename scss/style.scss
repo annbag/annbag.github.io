@@ -259,10 +259,12 @@ header {
 				}
 			}
 			nav {
+				position: fixed;
+				width: 100%;
 				top: -100vh;				
 				}				
 				.burger {
-					position: relative;
+					position: fixed;
 					display: block;
 					top: 20px;
 					right: 20px;
@@ -335,22 +337,22 @@ header {
   		}
 		}
 		section.welcome {
-			height: calc(100vh - 145px); 
+			height: 100vh; 
 			h1 {
-				top: -5%;
+				top: 10%;
 				font-size: 3.5rem;
 				letter-spacing: 1px;
 			}
 			h2 {
-				top: 15%;
+				top: 25%;
 				font-size: 1.8rem;
 			}
 			p {
-				top: 35%;
+				top: 45%;
 				font-size: 1.6rem;
 			}
 			.icon {
-				top: 45%;
+				top: 55%;
 				i {
 					font-size: 3.2rem;
 				}				
@@ -377,10 +379,8 @@ header {
   			text-align: center;
   		}
   	}
-  	section.welcome {
-			height: calc(100vh - 115px); 				
+  	section.welcome {			 				
 			h1 {
-				top: -10%;
 				font-size: 2.8rem;
 			}
 			h2 {
@@ -390,7 +390,7 @@ header {
 				font-size: 1.4rem;
 			}
 			a.arrow-down {
-				bottom: 20%;
+				bottom: 15%;
 				span {
 					width: 12px;
 					height: 12px;
@@ -432,9 +432,6 @@ header {
 				padding: 0;
 			}
   	}
-  	section.welcome {
-			height: calc(100vh - 190px); 				
-  	}  	
 	}
 }
 /*section about*/

@@ -281,10 +281,12 @@ header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
     font-size: 2.4rem;
   }
   header div.wrap nav {
+    position: fixed;
+    width: 100%;
     top: -100vh;
   }
   header div.wrap .burger {
-    position: relative;
+    position: fixed;
     display: block;
     top: 20px;
     right: 20px;
@@ -353,23 +355,23 @@ header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
     text-align: right;
   }
   header div.wrap section.welcome {
-    height: calc(100vh - 145px);
+    height: 100vh;
   }
   header div.wrap section.welcome h1 {
-    top: -5%;
+    top: 10%;
     font-size: 3.5rem;
     letter-spacing: 1px;
   }
   header div.wrap section.welcome h2 {
-    top: 15%;
+    top: 25%;
     font-size: 1.8rem;
   }
   header div.wrap section.welcome p {
-    top: 35%;
+    top: 45%;
     font-size: 1.6rem;
   }
   header div.wrap section.welcome .icon {
-    top: 45%;
+    top: 55%;
   }
   header div.wrap section.welcome .icon i {
     font-size: 3.2rem;
@@ -394,11 +396,7 @@ header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
     font-size: 1.4rem;
     text-align: center;
   }
-  header div.wrap section.welcome {
-    height: calc(100vh - 115px);
-  }
   header div.wrap section.welcome h1 {
-    top: -10%;
     font-size: 2.8rem;
   }
   header div.wrap section.welcome h2 {
@@ -408,7 +406,7 @@ header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
     font-size: 1.4rem;
   }
   header div.wrap section.welcome a.arrow-down {
-    bottom: 20%;
+    bottom: 15%;
   }
   header div.wrap section.welcome a.arrow-down span {
     width: 12px;
@@ -447,9 +445,6 @@ header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
     float: none;
     text-align: center;
     padding: 0;
-  }
-  header div.wrap section.welcome {
-    height: calc(100vh - 190px);
   }
 }
 
