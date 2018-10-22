@@ -456,12 +456,14 @@ section.about {
 	  		text-align: justify;
 	  		line-height: 150%;
 	  		padding: 15px 30px;
-	  		color: $color-darker; 		
+	  		color: $color-darker;
+	  		span {
+	  			font-weight: bold;
+	  		}
 	  	}
   	}  	
 		div.image {
 			flex-basis: 40%;
-
 			img {
 				width: 350px;
 				height: 350px;				
@@ -575,7 +577,7 @@ section.portfolio {
 	  			font-size: 1.6rem;
 	  		}
 	  		p {
-	  			padding: 0 10px;
+	  			padding: 0 15px;
 	  			font-size: 1.2rem;
 	  		}
 	  		a {
