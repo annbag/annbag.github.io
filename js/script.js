@@ -1,5 +1,5 @@
 //burger
-const nav = document.querySelector('nav');
+var nav = document.querySelector('nav');
 document.querySelector('.burger').addEventListener('click', function() {
 	this.classList.toggle('active');
 	nav.classList.toggle('active');	
@@ -7,33 +7,33 @@ document.querySelector('.burger').addEventListener('click', function() {
 $('.btn1').on('click', function () {
 	$('body, html').animate({
 		scrollTop: $('header').offset().top
-	}, 500)
-})
+	}, 500);
+});
 $('.btn2').on('click', function () {
 	$('body, html').animate({
 		scrollTop: $('.about').offset().top
-	}, 500)
-})
+	}, 500);
+});
 $('.btn3').on('click', function () {
 	$('body, html').animate({
 		scrollTop: $('.skills').offset().top
-	}, 750)
-})
+	}, 750);
+});
 $('.btn4').on('click', function () {
 	$('body, html').animate({
 		scrollTop: $('.portfolio').offset().top
-	}, 1000)
-})
+	}, 1000);
+});
 $('.btn5').on('click', function () {
 	$('body, html').animate({
 		scrollTop: $('.contact').offset().top
-	}, 1250)
-})	
+	}, 1250);
+});
 
 $('a.arrow-down').click(function() {
 	$('html,body').animate({
 		scrollTop: $('.about').offset().top
-	}, 500)
+	}, 500);
 });
 
 $(document).ready(function() {
