@@ -1,6 +1,13 @@
+//burger
+// var nav = document.querySelector('nav');
+// document.querySelector('.burger').addEventListener('click', function() {
+// 	this.classList.toggle('active');
+// 	nav.classList.toggle('active');	
+// });
+
 $('.burger').on('click', function() {
-	$('nav, this').toggleClass('active');
-})
+	$('nav, .burger').toggleClass('active');
+});
 
 $('.btn1').on('click', function () {
 	$('body, html').animate({
