@@ -134,6 +134,8 @@ section.about div.description div.text { -ms-flex-positive: 1; flex-grow: 1; bac
 
 section.about div.description div.text p { font-size: 1.6rem; text-align: justify; line-height: 150%; padding: 15px 30px; color: #2B324F; }
 
+section.about div.description div.text p span { font-weight: bold; }
+
 section.about div.description div.image { -ms-flex-preferred-size: 40%; flex-basis: 40%; }
 
 section.about div.description div.image img { width: 350px; height: 350px; margin: 0 80px 80px; border-radius: 50%; border: 4px solid #1C2F7B; -o-object-fit: cover; object-fit: cover; }
@@ -175,7 +177,7 @@ section.portfolio div.projects div div.caption { display: block; width: 300px; m
 
 section.portfolio div.projects div div.caption h2 { text-transform: uppercase; padding: 10px 0; font-size: 1.6rem; }
 
-section.portfolio div.projects div div.caption p { padding: 0 10px; font-size: 1.2rem; }
+section.portfolio div.projects div div.caption p { padding: 0 15px; font-size: 1.2rem; }
 
 section.portfolio div.projects div div.caption a { display: inline-block; margin: 15px; padding: 10px 20px; font-size: 1.4rem; border-style: none; background-color: #1C2F7B; border-radius: 6px; color: #EAEEFC; text-transform: uppercase; text-decoration: none; letter-spacing: 2px; transition: .3s; cursor: pointer; }
 
