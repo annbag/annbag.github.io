@@ -10,7 +10,7 @@ header div.wrap { height: 100vh; background-color: rgba(255, 255, 255, 0.3); }
 
 header div.wrap nav { position: relative; top: 0; left: 0; background-color: rgba(255, 255, 255, 0.6); overflow: hidden; height: 80px; transition: .5s; z-index: 1; }
 
-header div.wrap nav img { float: left; padding-left: 2%; }
+header div.wrap nav img { float: left; padding-left: 2%; padding-top: 10px; }
 
 header div.wrap nav ul { float: right; padding-right: 2%; list-style: none; font-size: 0; }
 
@@ -24,13 +24,13 @@ header div.wrap nav ul li a:hover { color: #3A61FF; }
 
 header div.wrap nav ul li a:hover span { left: 2%; }
 
-header div.wrap section.welcome { position: relative; top: 0; left: 0; height: calc(100vh - 80px); }
+header div.wrap section.welcome { position: relative; top: 0; left: 0; height: calc(100vh - 80px); display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; }
 
-header div.wrap section.welcome h1 { position: absolute; left: 50%; transform: translateX(-50%); top: 15%; font-size: 7rem; letter-spacing: 2px; color: #1C2F7B; }
+header div.wrap section.welcome h1 { font-size: 7rem; letter-spacing: 2px; color: #1C2F7B; }
 
-header div.wrap section.welcome h2 { position: absolute; left: 50%; transform: translateX(-50%); top: 30%; text-transform: uppercase; font-size: 3rem; color: #2B324F; }
+header div.wrap section.welcome h2 { text-transform: uppercase; font-size: 3rem; color: #2B324F; }
 
-header div.wrap section.welcome p { position: absolute; left: 50%; transform: translateX(-50%); top: 45%; font-size: 2rem; font-family: 'Handlee', cursive; color: #3A61FF; animation: text 16s linear infinite; opacity: 0; }
+header div.wrap section.welcome p { /*@include positionCenter() top:10%;*/ font-size: 2rem; font-family: 'Handlee', cursive; color: #3A61FF; animation: text 16s linear infinite; opacity: 0; }
 
 header div.wrap section.welcome p:nth-of-type(2) { animation-delay: 4s; }
 
@@ -48,9 +48,7 @@ header div.wrap section.welcome p:nth-of-type(5) { animation-delay: 16s; }
   25% { opacity: 0; }
   100% { opacity: 0; } }
 
-header div.wrap section.welcome .icon { position: absolute; left: 50%; transform: translateX(-50%); top: 50%; }
-
-header div.wrap section.welcome .icon i { padding: 20px 10px; font-size: 5rem; color: #1C2F7B; transition: .5s; }
+header div.wrap section.welcome .icon i { padding: 20px 10px; font-size: 5rem; color: #1C2F7B; transition: 2s; }
 
 header div.wrap section.welcome .icon i:hover { background: -webkit-linear-gradient(#1C2F7B, #3A61FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
@@ -150,7 +148,7 @@ section.about div.description div.image img { width: 350px; height: 350px; margi
   section.about div.description div.image img { width: 250px; height: 250px; margin: 20px; } }
 
 /*section skills*/
-section.skills { background-image: url(../images/bg2.png); background-attachment: fixed; background-repeat: no-repeat; background-position: center; background-size: cover; }
+section.skills { background-color: #FDF7F6; /*background-image: url(../images/bg4.jpeg);*/ /*background-image: url(../images/bg2.png);*/ background-attachment: fixed; background-repeat: no-repeat; background-position: center; background-size: cover; }
 
 section.skills h1 { position: relative; top: 0; left: 50%; transform: translateX(-50%); display: inline-block; padding: 60px 0 60px; font-size: 4.8rem; text-transform: uppercase; text-align: center; background: linear-gradient(to right, #2B324F, #3A61FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 3px; }
 
