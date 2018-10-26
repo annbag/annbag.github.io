@@ -16,6 +16,11 @@ html {
   clear: both;
 }
 
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 header {
   background-image: url(../images/bg1.jpg);
   background-repeat: no-repeat;
@@ -172,14 +177,17 @@ header div.wrap section.welcome div.changeText p:nth-of-type(5) {
   }
 }
 
-header div.wrap section.welcome .icon i {
-  padding: 20px 10px;
-  font-size: 5rem;
-  color: #1C2F7B;
+header div.wrap section.welcome .icon a {
   transition: 2s;
 }
 
-header div.wrap section.welcome .icon i:hover {
+header div.wrap section.welcome .icon a i {
+  padding: 20px 10px;
+  font-size: 5rem;
+  color: #1C2F7B;
+}
+
+header div.wrap section.welcome .icon a i:hover {
   background: -webkit-linear-gradient(#1C2F7B, #3A61FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -469,8 +477,6 @@ section.about h1 {
 }
 
 section.about div.description {
-  max-width: 1280px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
 }
@@ -540,9 +546,7 @@ section.about div.description div.image img {
 
 /*section skills*/
 section.skills {
-  background-color: #FDF7F6;
-  /*background-image: url(../images/bg4.jpeg);*/
-  /*background-image: url(../images/bg2.png);*/
+  background-image: url(../images/bg5.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -550,7 +554,11 @@ section.skills {
   background-size: cover;
 }
 
-section.skills h1 {
+section.skills div.wrap {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+section.skills div.wrap h1 {
   position: relative;
   top: 0;
   left: 50%;
@@ -566,9 +574,7 @@ section.skills h1 {
   letter-spacing: 3px;
 }
 
-section.skills div.banner-skills {
-  max-width: 1280px;
-  margin: 0 auto;
+section.skills div.wrap div.banner-skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -577,11 +583,11 @@ section.skills div.banner-skills {
   overflow: hidden;
 }
 
-section.skills div.banner-skills div.skill {
+section.skills div.wrap div.banner-skills div.skill {
   flex-basis: 20%;
 }
 
-section.skills div.banner-skills div.skill img {
+section.skills div.wrap div.banner-skills div.skill img {
   display: block;
   width: 150px;
   margin: 50px 25px;
@@ -615,8 +621,6 @@ section.portfolio h1 {
 }
 
 section.portfolio div.projects {
-  max-width: 1280px;
-  margin: 0 auto;
   padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;

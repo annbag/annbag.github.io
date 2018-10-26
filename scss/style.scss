@@ -55,6 +55,10 @@ $lightgrey-color: #F2F2F2;
 	display: table;
 	clear: both;	
 }
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
 header {
 	background-image: url(../images/bg1.jpg);
 	@include bgImg()
@@ -184,18 +188,20 @@ header {
 				}
 			}
 			
-			.icon {				
-				i {					
-					padding: 20px 10px;
-					font-size: 5rem;
-					color: $main-color;
+			.icon {
+				a	{
 					transition: 2s;
-					&:hover {
-						background: -webkit-linear-gradient($main-color, $color-lighter);
-					  -webkit-background-clip: text;
-					  -webkit-text-fill-color: transparent;
-					}
-				}				
+					i {					
+						padding: 20px 10px;
+						font-size: 5rem;
+						color: $main-color;					
+						&:hover {						
+							background: -webkit-linear-gradient($main-color, $color-lighter);
+						  -webkit-background-clip: text;
+						  -webkit-text-fill-color: transparent;
+						}
+					}	
+				}							
 			}
 			a.arrow-down {
 				@include positionCenter()
@@ -444,9 +450,7 @@ section.about {
 	h1 {
 		@include styleHeadline()
   }
-  div.description {
-  	max-width: 1280px;
-		margin: 0 auto;
+  div.description {  	
   	display: flex;
   	align-items: center;
   	div.text {
@@ -514,34 +518,32 @@ section.about {
 	}
 }
 /*section skills*/
-section.skills { 
-	background-color: #FDF7F6;
-	/*background-image: url(../images/bg4.jpeg);*/
-	/*background-image: url(../images/bg2.png);*/
+section.skills { 	
+	background-image: url(../images/bg5.png);
 	background-attachment: fixed;
 	@include bgImg()
-	h1 {
-		@include styleHeadline()
-  }
-  div.banner-skills {
-  	max-width: 1280px;
-		margin: 0 auto;
-  	display: flex;
-  	flex-wrap: wrap;
-  	justify-content: center;
-  	align-items: center;
-  	padding: 0 80px 50px 80px;
-  	overflow: hidden;
-  	div.skill {
-  		flex-basis: 20%;
-  		img {
-	  		display: block;
-	  		width: 150px;
-	  		margin: 50px 25px;
-	  	}
-  	}
-  	
-  }
+	div.wrap {
+		background-color: rgba(255, 255, 255, 0.5);
+		h1 {
+			@include styleHeadline()
+	  }
+	  div.banner-skills {	  	
+	  	display: flex;
+	  	flex-wrap: wrap;
+	  	justify-content: center;
+	  	align-items: center;
+	  	padding: 0 80px 50px 80px;
+	  	overflow: hidden;
+	  	div.skill {
+	  		flex-basis: 20%;
+	  		img {
+		  		display: block;
+		  		width: 150px;
+		  		margin: 50px 25px;
+		  	}
+	  	}	  	
+	  }
+	}	
 }
 @media(max-width: 825px) {
 	section.skills {
@@ -556,9 +558,7 @@ section.portfolio {
 	h1 {
 		@include styleHeadline()
   }
-  div.projects {
-  	max-width: 1280px;
-		margin: 0 auto;		
+  div.projects {  			
 		padding-bottom: 50px;
   	display: flex;
   	flex-wrap: wrap;
