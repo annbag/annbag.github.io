@@ -560,8 +560,11 @@ section.portfolio {
   	div {
 	  	a img {
 	  		margin: 40px 40px 0; 
+	  		transform: scale(1);
+	  		transition: .3s ease-in-out;
 	  		&:hover {
-	  			opacity: 0.7;
+	  			transform: scale(1.05);
+	  			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 	  		}
 	  	}
 	  	div.caption {
@@ -623,9 +626,8 @@ section.portfolio {
 }
 /*section contact*/
 section.contact {
-	height: 100vh;
+	height: 70vh;
 	background-image: url(../images/bg4.jpeg);
-	/*background-image: url(../images/bg2.png);*/
 	background-attachment: fixed;
 	position: relative;
 	top: 0;
@@ -633,8 +635,7 @@ section.contact {
 	width: 100%;
 	@include bgImg()
 	div.wrap {
-		height: 100vh;
-		/*background-color: rgba(0, 0, 0, 0.5);*/
+		height: 70vh;
 		background-color: rgba(255, 255, 255, 0.5);
 		h1 {
 			@include styleHeadline()
@@ -684,8 +685,8 @@ section.contact {
 		}
 		div.information {
 			position: absolute;
-			left: 10%;
-			right: 10%;
+			left: 12%;
+			right: 12%;
 			top: 60%;
 			display: flex;
 			align-items: center;
@@ -696,11 +697,11 @@ section.contact {
 				display: flex;
 				flex-direction: column;
 				.icon {
-					font-size: 5rem;
+					font-size: 2.6rem;
 					color: $color-darker;
 				}
 				p.txt {
-					font-size: 2.6rem;
+					font-size: 2.2rem;
 				}
 			}
 		}
