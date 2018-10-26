@@ -509,9 +509,9 @@ section.about {
 }
 /*section skills*/
 section.skills { 
-	/*background-color: #FDF7F6;*/
+	background-color: #FDF7F6;
 	/*background-image: url(../images/bg4.jpeg);*/
-	background-image: url(../images/bg2.png);
+	/*background-image: url(../images/bg2.png);*/
 	background-attachment: fixed;
 	@include bgImg()
 	h1 {

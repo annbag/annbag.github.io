@@ -532,9 +532,9 @@ section.about div.description div.image img {
 
 /*section skills*/
 section.skills {
-  /*background-color: #FDF7F6;*/
+  background-color: #FDF7F6;
   /*background-image: url(../images/bg4.jpeg);*/
-  background-image: url(../images/bg2.png);
+  /*background-image: url(../images/bg2.png);*/
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
