@@ -114,9 +114,17 @@ header div.wrap section.welcome h2 {
   color: #2B324F;
 }
 
-header div.wrap section.welcome p {
-  /*@include positionCenter()
-				top:10%;*/
+header div.wrap section.welcome div.changeText {
+  position: relative;
+  padding: 20px 0;
+}
+
+header div.wrap section.welcome div.changeText p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  white-space: nowrap;
   font-size: 2rem;
   font-family: 'Handlee', cursive;
   color: #3A61FF;
@@ -124,19 +132,19 @@ header div.wrap section.welcome p {
   opacity: 0;
 }
 
-header div.wrap section.welcome p:nth-of-type(2) {
+header div.wrap section.welcome div.changeText p:nth-of-type(2) {
   animation-delay: 4s;
 }
 
-header div.wrap section.welcome p:nth-of-type(3) {
+header div.wrap section.welcome div.changeText p:nth-of-type(3) {
   animation-delay: 8s;
 }
 
-header div.wrap section.welcome p:nth-of-type(4) {
+header div.wrap section.welcome div.changeText p:nth-of-type(4) {
   animation-delay: 12s;
 }
 
-header div.wrap section.welcome p:nth-of-type(5) {
+header div.wrap section.welcome div.changeText p:nth-of-type(5) {
   animation-delay: 16s;
 }
 
