@@ -187,20 +187,19 @@ header {
 					}
 				}
 			}
-			
 			.icon {
 				a	{
-					transition: 2s;
 					i {					
 						padding: 20px 10px;
 						font-size: 5rem;
-						color: $main-color;					
-						&:hover {						
-							background: -webkit-linear-gradient($main-color, $color-lighter);
-						  -webkit-background-clip: text;
-						  -webkit-text-fill-color: transparent;
-						}
+						color: $main-color;	
+						transition: .5s linear;
 					}	
+					&:hover i {						
+						background: -webkit-linear-gradient($main-color, $color-lighter);
+					  -webkit-background-clip: text;
+					  -webkit-text-fill-color: transparent;
+					}
 				}							
 			}
 			a.arrow-down {
@@ -325,10 +324,8 @@ header {
 		}
 	header div.wrap nav ul {
 		padding-right: 6%;
-		li {
-			a {
-				padding: 30px 10px;				
-			}
+		li a {
+			padding: 30px 10px;				
 		}
 	}
 }
@@ -351,21 +348,17 @@ header {
 		section.welcome {
 			height: 100vh; 
 			h1 {
-/*				top: 10%;
-*/			font-size: 3.5rem;
+				font-size: 3.5rem;
 				letter-spacing: 1px;
 			}
 			h2 {
-/*				top: 25%;
-*/			font-size: 1.8rem;
+				font-size: 1.8rem;
 			}
 			p {
-/*				top: 45%;
-*/			font-size: 1.6rem;
+				font-size: 1.6rem;
 			}
 			.icon {
-/*				top: 55%;
-*/				i {
+				i {
 					font-size: 3.2rem;
 				}				
 			}
@@ -431,7 +424,6 @@ header {
   	}  	
 	}
 }
-/**/
 @media(max-width: 360px) and (orientation: portrait) {
 	header div.wrap {
 		nav {

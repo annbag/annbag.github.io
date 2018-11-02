@@ -177,17 +177,14 @@ header div.wrap section.welcome div.changeText p:nth-of-type(5) {
   }
 }
 
-header div.wrap section.welcome .icon a {
-  transition: 2s;
-}
-
 header div.wrap section.welcome .icon a i {
   padding: 20px 10px;
   font-size: 5rem;
   color: #1C2F7B;
+  transition: .5s linear;
 }
 
-header div.wrap section.welcome .icon a i:hover {
+header div.wrap section.welcome .icon a:hover i {
   background: -webkit-linear-gradient(#1C2F7B, #3A61FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -365,24 +362,14 @@ header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
     height: 100vh;
   }
   header div.wrap section.welcome h1 {
-    /*				top: 10%;
-*/
     font-size: 3.5rem;
     letter-spacing: 1px;
   }
   header div.wrap section.welcome h2 {
-    /*				top: 25%;
-*/
     font-size: 1.8rem;
   }
   header div.wrap section.welcome p {
-    /*				top: 45%;
-*/
     font-size: 1.6rem;
-  }
-  header div.wrap section.welcome .icon {
-    /*				top: 55%;
-*/
   }
   header div.wrap section.welcome .icon i {
     font-size: 3.2rem;
@@ -443,7 +430,6 @@ header div.wrap section.welcome a.arrow-up span:nth-of-type(3) {
   }
 }
 
-/**/
 @media (max-width: 360px) and (orientation: portrait) {
   header div.wrap nav {
     height: 190px;
