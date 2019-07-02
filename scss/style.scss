@@ -61,7 +61,7 @@ $lightgrey-color: #F2F2F2;
 }
 header {
 	background-image: url(../images/bg1.jpg);
-	@include bgImg()
+	@include bgImg();
 	height: 100vh;
 	text-align: center;
 	div.wrap {
@@ -142,7 +142,7 @@ header {
 				position: relative;
 				padding: 20px 0;
 				p {
-					@include positionCenter()
+					@include positionCenter();
 					top:10%;
 					white-space: nowrap;
 					font-size: 2rem;
@@ -203,11 +203,11 @@ header {
 				}							
 			}
 			a.arrow-down {
-				@include positionCenter()
+				@include positionCenter();
 				bottom: 12%;
 				span {
-					@include positionCenter()
-					@include arrow()
+					@include positionCenter();
+					@include arrow();
 					&:nth-of-type(2) {
 						animation-delay: .2s;
 						top: 15px;
@@ -224,8 +224,8 @@ header {
 				right: 5%;
 				z-index: 2;
 				span {
-					@include positionCenter()
-					@include arrow					
+					@include positionCenter();
+					@include arrow;				
 					border-top: 1px solid $color-darker;	
 					border-right: 1px solid $color-darker;
 					border-bottom: none;
@@ -513,11 +513,11 @@ section.about {
 section.skills { 	
 	background-image: url(../images/bg5.png);
 	background-attachment: fixed;
-	@include bgImg()
+	@include bgImg();
 	div.wrap {
 		background-color: rgba(255, 255, 255, 0.5);
 		h1 {
-			@include styleHeadline()
+			@include styleHeadline();
 	  }
 	  div.banner-skills {	  	
 	  	display: flex;
@@ -631,12 +631,12 @@ section.contact {
 	top: 0;
 	left: 0;
 	width: 100%;
-	@include bgImg()
+	@include bgImg();
 	div.wrap {
 		height: 70vh;
 		background-color: rgba(255, 255, 255, 0.5);
 		h1 {
-			@include styleHeadline()
+			@include styleHeadline();
 			padding: 30px 0 30px;
 		}
 		p {
@@ -645,7 +645,7 @@ section.contact {
 			text-align: center;
 		}
 		div p.animation {
-			@include positionCenter()
+			@include positionCenter();
 			top: 40%;
 			font-size: 2.4rem;
 			text-transform: uppercase;
@@ -705,7 +705,7 @@ section.contact {
 			}
 		}
 		div.icon-btn {
-			@include positionCenter()
+			@include positionCenter();
 			bottom: 5%;
 			i {					
 				padding: 20px 10px;
