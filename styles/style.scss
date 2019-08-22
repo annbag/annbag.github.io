@@ -1,53 +1,14 @@
+@import "core";
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
 html {
 	font-family: 'Roboto', sans-serif;
 	font-size: 10px;
-}
-$main-color: #1C2F7B;
-$color-darker: #2B324F;
-$color-lighter: #3A61FF;
-$lightblue-color: #EAEEFC;
-$lightgrey-color: #F2F2F2;
-@mixin bgImg() {
-	background-repeat: no-repeat;
-	background-position: center;
-	-webkit-background-size: cover;
-	background-size: cover;
-}
-@mixin positionCenter() {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-}
-@mixin arrow() {
-	top: 0;
-	width: 20px;
-	height: 20px;
-	margin-left: -10px;
-	border-left: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-	transform: rotate(-45deg);
-	animation: arrow 2s infinite;
-	opacity: 0;
-}
-@mixin styleHeadline() {
-	position: relative;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	display: inline-block;	
-	padding: 60px 0 60px;	
-	font-size: 4.8rem;
-	text-transform: uppercase;
-	text-align: center;
-	background: linear-gradient(to right, $color-darker, $color-lighter);
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;	
-	letter-spacing: 3px;
 }
 
 .container {
@@ -83,7 +44,7 @@ header {
 					a {					
 						display: block;
 						padding: 10px 20px;
-						color: $main-color;
+						color: $color-primary;
 						font-size: 1.6rem;
 						text-align: center;
 						text-decoration: none;
@@ -94,13 +55,13 @@ header {
 							position: absolute;
 							width: 96%;
 							height: 2px;
-							background-color: $color-lighter;
+							background-color: $color-primary-lighter;
 							bottom: 0;
 							left: -100%;
 							transition: .4s;
 						}
 						&:hover {
-							color: $color-lighter;
+							color: $color-primary-lighter;
 							span {
 								left: 2%;
 							}
@@ -121,12 +82,12 @@ header {
 			h1 {							
 				font-size: 7rem;
 				letter-spacing: 2px;
-				color: $main-color;
+				color: $color-primary;
 			}
 			h2 {
 				text-transform: uppercase;
 				font-size: 3rem;
-				color: $color-darker;
+				color: $color-primary-darker;
 			}
 			div.changeText {
 				position: relative;
@@ -137,7 +98,7 @@ header {
 					white-space: nowrap;
 					font-size: 2rem;
 					font-family: 'Handlee', cursive;
-					color: $color-lighter;
+					color: $color-primary-lighter;
 					animation: text 16s linear infinite;
 					opacity: 0;				
 					&:nth-of-type(2) {
@@ -182,11 +143,11 @@ header {
 					i {					
 						padding: 20px 10px;
 						font-size: 5rem;
-						color: $main-color;	
+						color: $color-primary;
 						transition: .5s linear;
 					}	
 					&:hover i {						
-						background: -webkit-linear-gradient($main-color, $color-lighter);
+						background: -webkit-linear-gradient($color-primary, $color-primary-lighter);
 					  -webkit-background-clip: text;
 					  -webkit-text-fill-color: transparent;
 					}
@@ -216,8 +177,8 @@ header {
 				span {
 					@include positionCenter();
 					@include arrow;				
-					border-top: 1px solid $color-darker;	
-					border-right: 1px solid $color-darker;
+					border-top: 1px solid $color-primary-darker;
+					border-right: 1px solid $color-primary-darker;
 					border-bottom: none;
 					border-left: none;				
 					&:nth-of-type(1) {
@@ -277,7 +238,7 @@ header {
 						position: absolute;
 		 				width: 100%;
 		 				height: 5px;
-		 				background-color: $main-color;
+		 				background-color: $color-primary;
 		 				left: 0;
 		 				border-radius: 6px;
 		 				transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .2s;
@@ -428,7 +389,7 @@ header {
 }
 /*section about*/
 section.about {	
-	background-color: $lightgrey-color;
+	background-color: $color-lightgrey;
 	h1 {
 		@include styleHeadline()
   }
@@ -437,7 +398,7 @@ section.about {
   	align-items: center;
   	div.text {
   		flex-grow: 1;
-  		background-color: $lightblue-color;
+  		background-color: $color-lightblue;
   		margin: 0 80px 80px;
   		padding: 15px 0;
   		box-shadow: 5px 5px 20px #333;
@@ -446,7 +407,7 @@ section.about {
 	  		text-align: justify;
 	  		line-height: 150%;
 	  		padding: 8px 30px;
-	  		color: $color-darker;
+	  		color: $color-primary-darker;
 	  		span {
 	  			font-weight: bold;
 	  		}
@@ -459,7 +420,7 @@ section.about {
 				height: 350px;				
 				margin: 0 80px 80px;
 				border-radius: 50%;
-				border: 4px solid $main-color;
+				border: 4px solid $color-primary;
 				object-fit: cover;
 			}
 		}
@@ -536,7 +497,7 @@ section.skills {
 }
 /*section portfolio*/
 section.portfolio {
-	background-color: $lightgrey-color;	
+	background-color: $color-lightgrey;
 	h1 {
 		@include styleHeadline()
   }
@@ -560,7 +521,7 @@ section.portfolio {
 	  		width: 300px;
 	  		margin: -3px 40px 80px;
 	  		background-color: #4D5A91;
-	  		color: $lightblue-color;
+	  		color: $color-lightblue;
 	  		text-align: center;	  		
 	  		h2 {
 	  			text-transform: uppercase;
@@ -577,16 +538,16 @@ section.portfolio {
 					padding: 10px 20px;
 					font-size: 1.4rem;
 					border-style: none;
-					background-color: $main-color;
+					background-color: $color-primary;
 					border-radius: 6px;
-					color: $lightblue-color;
+					color: $color-lightblue;
 					text-transform: uppercase;
 					text-decoration: none;
 					letter-spacing: 2px;
 					transition: .3s;
 					cursor: pointer;
 					&:hover {
-						background-image: linear-gradient($main-color, #21378F);
+						background-image: linear-gradient($color-primary, #21378F);
 					}
 				}
 	  	}
@@ -631,7 +592,7 @@ section.contact {
 		}
 		p {
 			font-size: 2rem;
-			color: $color-darker;
+			color: $color-primary-darker;
 			text-align: center;
 		}
 		div p.animation {
@@ -640,13 +601,13 @@ section.contact {
 			font-size: 2.4rem;
 			text-transform: uppercase;
 			font-weight: bold;
-			color: $color-lighter;
+			color: $color-primary-lighter;
 			opacity: 0;
 			letter-spacing: 2px;
 			animation: changeText 6s linear infinite;
 			&:nth-of-type(2) {
 				animation-delay: 3s;
-				color: $main-color;
+				color: $color-primary;
 			}
 		}
 		@keyframes changeText {
@@ -687,7 +648,7 @@ section.contact {
 				flex-direction: column;
 				.icon {
 					font-size: 2.5rem;
-					color: $color-darker;
+					color: $color-primary-darker;
 				}
 				p.txt {
 					font-size: 2rem;
@@ -700,10 +661,10 @@ section.contact {
 			i {					
 				padding: 20px 10px;
 				font-size: 5rem;
-				color: $main-color;
+				color: $color-primary;
 				transition: .5s;
 				&:hover {
-					background: -webkit-linear-gradient($main-color, $color-lighter);
+					background: -webkit-linear-gradient($color-primary, $color-primary-lighter);
 				  -webkit-background-clip: text;
 				  -webkit-text-fill-color: transparent;
 				}
@@ -858,12 +819,12 @@ section.contact {
 }
 /*footer*/
 footer {
-	background-color: $lightgrey-color;
+	background-color: $color-lightgrey;
 	text-align: center;
 	p {
 		padding: 15px;
 		font-size: 1.6rem;
-		color: $color-darker;
+		color: $color-primary-darker;
 	}
 }
 @media(max-width: 825px) {

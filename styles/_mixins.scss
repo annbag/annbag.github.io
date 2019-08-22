@@ -1,0 +1,42 @@
+@import "variables";
+
+@mixin bgImg() {
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+@mixin positionCenter() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin arrow() {
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg);
+    animation: arrow 2s infinite;
+    opacity: 0;
+}
+
+@mixin styleHeadline() {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 60px 0 60px;
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to right, $color-primary-darker, $color-primary-lighter);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+}
