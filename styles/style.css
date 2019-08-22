@@ -30,13 +30,25 @@ header div.wrap {
 header div.wrap nav {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.6);
   overflow: hidden;
   height: 80px;
   transition: 0.5s;
   z-index: 1;
+}
+header div.wrap nav .wrap-nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+header div.wrap nav .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 header div.wrap nav ul {
   list-style: none;
