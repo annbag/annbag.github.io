@@ -1,5 +1,8 @@
 @import "core";
-@import url("https://fonts.googleapis.com/css?family=Handlee|Roboto&display=swap");
+@font-face {
+    font-display: swap;
+    src: url("https://fonts.googleapis.com/css?family=Handlee|Roboto");
+}
 
 * {
     margin: 0;
