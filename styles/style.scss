@@ -1,5 +1,4 @@
 @import "core";
-@import url('https://fonts.googleapis.com/css?family=Handlee|Roboto&display=swap');
 
 * {
     margin: 0;
@@ -637,7 +636,7 @@ section.portfolio {
                 color: $color-lightblue;
                 text-align: center;
 
-                h2 {
+                h3 {
                     text-transform: uppercase;
                     padding: 10px 0;
                     font-size: 1.6rem;
